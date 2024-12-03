@@ -1,7 +1,7 @@
 import { conexionAPI } from "./conexionAPI.js";
 const lista = document.querySelector("[data-lista]")
 
-function crearCard(titulo,descripcion,url,imagen) {
+export default function crearCard(titulo,descripcion,url,imagem) {
     const video = document.createElement("li");
     video.className="videos__item";
     video.innerHTML = `<iframe width="100%" height="72%" src="${url}"
@@ -9,7 +9,7 @@ function crearCard(titulo,descripcion,url,imagen) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
             <div class="descripcion-video">
-                <img src="${imagen}" alt="logo canal alura">
+                <img src="${imagem}" alt="logo canal alura">
                 <h3>${titulo}</h3>
                 <p>${descripcion}</p>
             </div>`;
@@ -18,11 +18,14 @@ function crearCard(titulo,descripcion,url,imagen) {
 }
 
 async function listarVideos(){
-    const listAPI = await conexionAPI.listarVideos();
+    try {
+        const listAPI = await conexionAPI.listarVideos();
 
-    listAPI.forEach(video =>lista.appendChild(crearCard(video.titulo,video.descripcion,video.url,video.imagen))); {
-
+        listAPI.forEach(video =>lista.appendChild(crearCard(video.titulo,video.descripcion,video.url,video.imagem)));
+    } catch {
+        lista.innerHTML =  `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion :( </h2>`
     }
+
 }
 
 listarVideos();

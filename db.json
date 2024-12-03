@@ -83,6 +83,20 @@
       "url": "https://www.youtube.com/embed/mwNfWRsDDWE",
       "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
       "id": 12
+    },
+    {
+      "titulo": "De JavaScript a TypeScript: La Evolución que Todo Front-End Necesita #aluratips",
+      "descripcion": "NaN mil visualizaciones",
+      "url": "https://www.youtube.com/embed/BaRZEFHI-oY&pp=ygULYWx1cmEgbGF0YW0%3D",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 13
+    },
+    {
+      "titulo": "nuevo videos",
+      "descripcion": "NaN mil visualizaciones",
+      "url": "https://www.youtube.com/embed/BaRZEFHI-oY&pp=ygULYWx1cmEgbGF0YW0%3D",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 14
     }
   ]
 }
